@@ -13,6 +13,7 @@ public class Main {
             System.out.println("Server is running...");
             ExecutorService pool = Executors.newFixedThreadPool(200);
             //Main Loop
+
             while(true) {
                 Game game = new Game();
                 pool.execute(game.new Player(listener.accept(), 1));
